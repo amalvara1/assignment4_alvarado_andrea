@@ -55,5 +55,6 @@ Universal Styling
 ======================*/
 
 body {
-	background-image: url("dog1.jpg");
+	background-image: url('../images/dog1.jpg');
+	margin: 5em;
 }
