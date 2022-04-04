@@ -22,12 +22,34 @@ console.log(geth1);
 
 
 //Change the content actually shown on the page for the h1 node to “Updated Page Title” using innerHTML//
-var updatetitle = document.getElementById("title").innerHTML;
-document.
+var updatetitle = "Updated Page Title";
+var updateditem = document.getElementById("title").innerHTML = updatetitle;
 
 
 //Retrieve the value of the id attribute on h1 using firstElementChild and the element property id and log it to the console//
-
-
+var idvalue = document.getElementById("site-header").firstElementChild;
+var getattrib2 = idvalue.getAttribute('id');
+console.log(getattrib2);
 
 //Change the value of the id attribute on h1 to “new-title” using firstElementChild and the element property id//
+
+
+//Changing Items in the DOM://
+//Use the appendChild method to add a new <p> node inside the section.//
+var node = document.getElementById("content");
+var inner_p = document.createElement("p");
+var inner_p_text = document.createTextNode("this is a new p");
+inner_p.appendChild(inner_p_text);
+inner_p.title = "new-p-node";
+node.appendChild(inner_p);
+
+
+//Use the removeChild method to remove the <p> node in the aside.//
+var remove = document.getElementById("tangent");
+remove.removeChild(remove.firstElementChild);
+
+//Use the replaceChild method to replace a the h2 in the section with an h3 with the value “New Heading”//
+var replaceh2 = document.createElement("h3");
+var newtext = document.createTextNode("New Heading")
+replaceh2.appendChild(newtext);
+content.replaceChild(replaceh2,h2);
