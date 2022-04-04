@@ -20,7 +20,6 @@ console.log(getchild);
 var geth1 = document.getElementById("title").parentNode.innerHTML;
 console.log(geth1);
 
-
 //Change the content actually shown on the page for the h1 node to “Updated Page Title” using innerHTML//
 var updatetitle = "Updated Page Title";
 var updateditem = document.getElementById("title").innerHTML = updatetitle;
@@ -30,8 +29,6 @@ var updateditem = document.getElementById("title").innerHTML = updatetitle;
 var idvalue = document.getElementById("site-header").firstElementChild;
 var getattrib2 = idvalue.getAttribute('id');
 console.log(getattrib2);
-
-//Change the value of the id attribute on h1 to “new-title” using firstElementChild and the element property id//
 
 
 //Changing Items in the DOM://
@@ -49,7 +46,7 @@ var remove = document.getElementById("tangent");
 remove.removeChild(remove.firstElementChild);
 
 //Use the replaceChild method to replace a the h2 in the section with an h3 with the value “New Heading”//
-var replaceh2 = document.createElement("h3");
-var newtext = document.createTextNode("New Heading")
-replaceh2.appendChild(newtext);
-content.replaceChild(replaceh2,h2);
+var h3 = document.getElementById("section-h2");
+var innerh3 = document.createTextNode("New Heading");
+h3.appendChild(innerh3);
+node.replaceChild(innerh3,h3);
